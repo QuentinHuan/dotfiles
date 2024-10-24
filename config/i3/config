@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 16
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -126,7 +126,7 @@ bindsym $mod+6  workspace number $ws6
 bindsym $mod+7  workspace number $ws7  
 bindsym $mod+8  workspace number $ws8  
 bindsym $mod+9  workspace number $ws9  
-bindsym $mod+0  workspace number $ws9  
+bindsym $mod+0  workspace number $ws10  
 
 bindsym $mod+bracketright workspace next_on_output
 bindsym $mod+bracketleft  workspace prev_on_output
@@ -142,6 +142,7 @@ bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
 
 bindsym $mod+Shift+bracketright workspace next_on_output
 bindsym $mod+Shift+bracketleft  workspace prev_on_output
@@ -161,7 +162,7 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
 
 bindsym $mod+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
 
-bindsym $mod+w exec --no-startup-id /home/huan/Softwares/firefox/firefox
+bindsym $mod+w exec --no-startup-id firefox
 bindsym $mod+e exec --no-startup-id nautilus 
 bindsym $mod+Shift+p exec --no-startup-id maim --format=png "/home/$USER/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png" ; exec notify-send -a time "`date +"%H:%M %a %d %b"`"
 
@@ -223,12 +224,6 @@ bar {
 
 # bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'"
 
-# switch keymap
-exec setxkbmap -layout us -variant intl 
-bindsym $mod+Ctrl+Shift+F11 exec setxkbmap -layout us -variant intl 
-bindsym $mod+Ctrl+Shift+F12 exec setxkbmap -layout fr 
-
-
 # show the window icon for the focused window to make it stand out
 bindsym $mod+p title_window_icon on
 
@@ -236,7 +231,7 @@ bindsym $mod+p title_window_icon on
 exec --no-startup-id feh --bg-scale /usr/share/backgrounds/matt-mcnulty-nyc-2nd-ave.jpg
 
 # window border 
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 4
 
 # keybinding to lock screen
 bindsym $mod+Ctrl+l exec "i3lock -c 000000"
