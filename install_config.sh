@@ -10,6 +10,7 @@ apt install suckless-tools
 apt install feh
 apt install i3lock
 apt install i3status
+apt install pavucontrol
 
 ## tmux
 apt install tmux
