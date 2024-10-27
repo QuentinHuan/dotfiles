@@ -35,7 +35,16 @@ apt install curl
 apt install mesa-utils
 
 ## bib
-sudo apt-get install libc6-i386
+apt install build-essential
+apt-get install libc6-i386
+
+#ghcup and haskell
+apt install libffi-dev libgmp-dev libgmp10 libncurses-dev pkg-config
 
 ## rhythmbox
 apt install rhythmbox
+
+## c++
+apt install clang
+apt install clang-15
+apt install g++
