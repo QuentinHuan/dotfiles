@@ -12,6 +12,9 @@ apt install i3lock
 apt install i3status
 apt install pavucontrol
 
+apt install brightnessctl
+sudo chmod +s /usr/bin/brightnessctl
+
 ## tmux
 apt install tmux
 

@@ -41,6 +41,10 @@ bindsym $mod+Shift+Ctrl+v exec --no-startup-id pactl set-sink-volume @DEFAULT_SI
 bindsym $mod+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym $mod+Shift+m exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# brightness control with xbacklight  TODO
+bindsym $mod+Shift+b exec --no-startup-id brightnessctl s +5%
+bindsym $mod+Shift+Ctrl+b exec --no-startup-id brightnessctl s 5%-
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
