@@ -206,7 +206,7 @@ client.background       $background
 
 for_window [all] title_window_icon on
 bar {
-    status_command i3status --config /home/huan/.config/i3/i3status.conf
+    status_command i3status --config $HOME/.config/i3/i3status.conf
 	strip_workspace_numbers yes
 	strip_workspace_name no
 	separator_symbol "|"
