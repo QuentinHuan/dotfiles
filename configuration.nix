@@ -96,6 +96,12 @@
 		# search
 		ripgrep
 
+		# parsing
+		tree-sitter
+
+		# zathura forward search
+		xdotool
+
 		## ---------------
 		#     Utility
 		## ---------------
@@ -127,12 +133,13 @@
 		discord
 
 	];
-# neovim
-programs.neovim = {
-  enable = true;
-  defaultEditor = true;
-  vimAlias = true;
-};
+
+	# neovim
+	programs.neovim = {
+		enable = true;
+		defaultEditor = true;
+		vimAlias = true;
+	};
 
 	# Steam
 	programs.steam = {
