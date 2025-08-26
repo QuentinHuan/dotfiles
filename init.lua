@@ -9,6 +9,9 @@ vim.call('plug#begin')
 -- Color theme
 Plug ('rebelot/kanagawa.nvim')
 
+-- Dim inactive windows
+Plug ('sunjon/shade.nvim')
+
 -- Status bar
 Plug ('nvim-lualine/lualine.nvim')
 
@@ -46,6 +49,8 @@ Plug ('scrooloose/nerdcommenter', { ['on'] = '<plug>NERDCommenterToggle' });
 Plug ('lervag/vimtex')
 Plug ('PatrBal/vim-textidote')
 
+
+
 -- Plug ('bfrg/vim-c-cpp-modern')
 vim.call('plug#end')
 
@@ -54,6 +59,8 @@ vim.call('plug#end')
 -- --------------------------------------
 
 -- Status bar color
+vim.opt.termguicolors = true
+
 require('lualine').setup {
   options = { theme  = "auto" },
 }
@@ -175,6 +182,7 @@ vim.cmd([[nnoremap <silent> <expr> <cr> &buftype ==# 'quickfix' ? "\<cr>" : ':no
 -- Syntax and indent
 vim.cmd("syntax on")
 vim.cmd("filetype plugin indent on")
+vim.g._ts_force_sync_parsing = true
 
 -- --------------------------------------
 --         Tmux style navigation
@@ -204,6 +212,19 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live gr
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
+----------------------------
+--  Dim inactive windows  --
+----------------------------
+
+require'shade'.setup({
+  overlay_opacity = 65,
+  opacity_step = 1,
+  keys = {
+    brightness_up    = '<C-Up>',
+    brightness_down  = '<C-Down>',
+    toggle           = '<Leader>s',
+  }
+})
 -- --------------------------------------
 --  Tree sitter parsing and syntax coloring
 -- --------------------------------------

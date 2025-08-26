@@ -239,5 +239,5 @@ exec --no-startup-id feh --bg-scale /usr/share/backgrounds/matt-mcnulty-nyc-2nd-
 for_window [class=".*"] border pixel 4
 
 # keybinding to lock screen
-bindsym $mod+Ctrl+l exec "i3lock -c 000000"
+bindsym $mod+Ctrl+l exec "i3lock-fancy"
 
