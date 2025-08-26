@@ -93,9 +93,6 @@
 		zsh
 		htop
 
-		# text editor
-		neovim
-
 		# search
 		ripgrep
 
@@ -130,6 +127,12 @@
 		discord
 
 	];
+# neovim
+programs.neovim = {
+  enable = true;
+  defaultEditor = true;
+  vimAlias = true;
+};
 
 	# Steam
 	programs.steam = {
