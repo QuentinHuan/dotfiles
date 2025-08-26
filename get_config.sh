@@ -1,3 +1,6 @@
+# get nixos configuration.nix file
+cp /etc/nixos/configuration.nix ./
+
 # get nvim config
 cp $HOME/.config/nvim/init.lua ./
 
