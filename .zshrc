@@ -1,8 +1,5 @@
 wallpaper=HEALTH.jpg
 
-
-
-#
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -82,7 +79,10 @@ ZSH_THEME="norm"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+	zsh-autosuggestions
+)
 ZSH_THEME="powerlevel10k/powerlevel10k"
 source $ZSH/oh-my-zsh.sh
 
@@ -93,6 +93,10 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
+alias vim="$HOME/Softwares/nvim-v0-11-2/bin/nvim"
+
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$PATH:$HOME/bin"
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -147,12 +151,18 @@ export DRJIT_LIBLLVM_PATH=/usr/lib/x86_64-linux-gnu/libLLVM-13.so
 
 export PATH="/home/huan/.local/bin:$PATH"
 export PATH=/usr/local/cuda-12.2/bin${PATH:+:${PATH}}
+export PATH=/home/huan/opt/REAPER/${PATH:+:${PATH}}
+export PATH=/usr/local/go/bin/${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 export TERM_TOOLS=/home/huan/git/term-tools
 
+# disable screen saving
+xset s off
+xset -dpms
 
-feh --bg-scale /home/huan/Pictures/wallpapers/$wallpaper
+# look at file .fehbg created after the initial feh invokation
+# feh --bg-scale /home/huan/Pictures/wallpapers/$wallpaper
 
 bindkey -v
 cd() { builtin cd "$@";ls;}
@@ -225,3 +235,9 @@ exrcrop_all(){
 	echo "$c/$total"
 	echo "DONE"
 }
+
+[ -f "/home/huan/.ghcup/env" ] && . "/home/huan/.ghcup/env" # ghcup-env
+export BUNDLE_PATH=~/.gems
+
+
+
