@@ -1,21 +1,23 @@
-home="/home/huan"
-## vim config
-mkdir $home/.config/nvim
-cp init.vim $home/.config/nvim/
+## nvim config
+mkdir -p $HOME/.config/nvim
+cp .config/nvim/init.lua $HOME/.config/nvim/
 
 ## zsh config
-cp .zshrc $home/
+cp .zshrc $HOME/
 
 ## bash config
-cp .bashrc $home/
+cp .bashrc $HOME/
 
 ## tmux config
-cp .tmux.conf $home/
+cp .tmux.conf $HOME/
 
 ## i3wn config
-cp config/i3/config $home/.config/i3/
-cp config/i3/i3status.conf $home/.config/i3/
+cp .config/i3/config $HOME/.config/i3/
+cp .config/i3/i3status.conf $HOME/.config/i3/
+
+## zathura config
+cp .config/zathura/ $HOME/.config/
 
 ## copy wallpapers
-cp -r wallpapers /home/huan/Pictures/
+cp -r wallpapers $HOME/Pictures/
 
