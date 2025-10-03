@@ -7,16 +7,13 @@ echo "Copy .config into home directory"
 cp -a .config $HOME/
 
 echo "Copy .zshrc into home directory"
-cp .zshrc $HOME/
-
-echo "Copy .zshrc into home directory"
-cp .zshrc $HOME/
+cp -a .zshrc $HOME/
 
 echo "Copy .bashrc into home directory"
-cp .bashrc $HOME/
+cp -a .bashrc $HOME/
 
 echo "Copy .tmux.conf into home directory"
-cp  .tmux.conf $HOME/
+cp -a .tmux.conf $HOME/
 
 # install vimplug
 echo "Download Vimplug "
