@@ -1,3 +1,5 @@
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash
 # get nixos configuration.nix file
 cp /etc/nixos/configuration.nix ./
 

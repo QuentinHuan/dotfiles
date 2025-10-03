@@ -1,3 +1,5 @@
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p curl
 echo "This program may requiere sudo priviledge"
 
 echo "Copy configuration.nix into /etc/nixos/"
